@@ -1,0 +1,39 @@
+{"frames": {
+
+"mainMenuIcon.png":
+{
+	"frame": {"x":2,"y":2,"w":111,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":111,"h":120},
+	"sourceSize": {"w":111,"h":120},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"nextWordIcon.png":
+{
+	"frame": {"x":115,"y":2,"w":103,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":103,"h":120},
+	"sourceSize": {"w":103,"h":120},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"tryAgainIcon.png":
+{
+	"frame": {"x":220,"y":2,"w":99,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":99,"h":120},
+	"sourceSize": {"w":99,"h":120},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "iconsWithText.png",
+	"format": "RGBA8888",
+	"size": {"w":321,"h":124},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:06bf9240e44b6f874392ce19047ad45a:a6c6d43973ba0c26d1486e4bda078865:c7b645618293f8adcc52b779fef0c330$"
+}
+}
