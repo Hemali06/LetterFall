@@ -4,35 +4,35 @@
 	<meta charset="utf-8" />
 	<title>Letter Fall</title>
 	<style> body { margin: 0; } </style>
-	<script src="src/phaser-2.0.7.min.js"></script>
-	<script src="src/Boot.js"></script>
-	<script src="src/Preloader.js"></script>
-	<script src="src/MainMenu.js"></script>
-	<script src="src/Play.js"></script>
-    <script src="src/LetterFall.js"></script>
-	<script src="src/FinalScreen.js"></script>
-	<script src="src/BombPicked.js"></script>
-	<script src="src/Help.js"></script> 
-	<script src="src/HighScores.js"></script>
+	<script src="js/phaser.min.js"></script>
+	<script src="js/Boot.js"></script>
+	<script src="js/Preloader.js"></script>
+	<script src="js/MainMenu.js"></script>
+	<script src="js/Play.js"></script>
+    <script src="js/LetterFall.js"></script>
+	<script src="js/FinalScreen.js"></script>
+	<script src="js/BombPicked.js"></script>
+	<script src="js/Help.js"></script> 
+	<script src="js/HighScores.js"></script>
 </head>
 <body>
+	<div id="divGame">  
+  	</div>	
 <script>
-(function() {
 	// initialize the framework
-	var game = new Phaser.Game(800,600, Phaser.AUTO, 'game');
+	var game = new Phaser.Game(800,600, Phaser.AUTO, 'divGame');
 	// add game states
 	game.state.add('Boot', Candy.Boot);
 	game.state.add('Preloader', Candy.Preloader);
 	game.state.add('MainMenu', Candy.MainMenu);
 	game.state.add('Play',Candy.Play);
-    game.state.add('LetterFall',Candy.LetterFall);
+    //game.state.add('LetterFall',Candy.LetterFall);
 	game.state.add('FinalScreen',Candy.FinalScreen);
 	game.state.add('BombPicked',Candy.BombPicked);
 	game.state.add('HighScores',Candy.HighScores);
 	game.state.add('Help',Candy.Help);
 	// start the Boot state
 	game.state.start('Boot');
-})();
 </script>
 </body>
 </html>
