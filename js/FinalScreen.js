@@ -18,9 +18,9 @@
     FinalScreen.prototype.create = function() {
       this.add.sprite(0, 0, 'background');
       this.add.text(190, 80, "Maximum possible score :", this.fontStyle);
-      this.add.text(570, 80, this.words[this.wordIndex].length, this.fontStyle);
-      this.add.text(270, 200, "You Scored :", fontStyle1);
-      this.add.text(500, 200, this.score, this.fontStyle1);
+      this.add.text(570, 80, Candy.words[Candy.wordIndex].length, this.fontStyle);
+      this.add.text(270, 200, "You Scored :", this.fontStyle1);
+      this.add.text(500, 200, Candy._score, this.fontStyle1);
       this.add.button(180, 350, 'iconsWithText', this.tryAgain, this, 'tryAgainIcon.png', 'tryAgainIcon.png', 'tryAgainIcon.png', 'tryAgainIcon.png');
       this.add.button(350, 350, 'iconsWithText', this.nextWord, this, 'nextWordIcon.png', 'nextWordIcon.png', 'nextWordIcon.png', 'nextWordIcon.png');
       this.add.button(520, 350, 'iconsWithText', this.mainMenu, this, 'mainMenuIcon.png', 'mainMenuIcon.png', 'mainMenuIcon.png', 'mainMenuIcon.png');
@@ -31,6 +31,7 @@
     };
 
     FinalScreen.prototype.nextWord = function() {
+      Candy.wordIndex++;
       this.state.start('Play');
     };
 

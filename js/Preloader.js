@@ -4,8 +4,8 @@
 
   Candy.Preloader = Preloader = (function() {
     function Preloader(game) {
-      this.GAME_WIDTH = 800;
-      this.GAME_HEIGHT = 600;
+      Candy.GAME_WIDTH = 800;
+      Candy.GAME_HEIGHT = 600;
       return;
     }
 
@@ -16,7 +16,7 @@
     Preloader.prototype.preload = function() {
       this.add.sprite(0, 0, 'background');
       this.add.sprite(0, 0, 'letterfall');
-      this.preloadBar = this.add.sprite(this.GAME_WIDTH - 600, this.GAME_HEIGHT - 250, 'preloaderBar');
+      this.preloadBar = this.add.sprite(Candy.GAME_WIDTH - 600, Candy.GAME_HEIGHT - 250, 'preloaderBar');
       this.game.load.setPreloadSprite(this.preloadBar);
       this.game.load.image('instructions', 'img/instructions.png');
       this.game.load.image('bomb', 'img/bomb.png');

@@ -1,8 +1,8 @@
 Candy.Preloader = class Preloader
 
   constructor: (game)->
-  	@GAME_WIDTH = 800
-  	@GAME_HEIGHT = 600
+  	Candy.GAME_WIDTH = 800
+  	Candy.GAME_HEIGHT = 600
   	return
   
   create: ->
@@ -12,7 +12,7 @@ Candy.Preloader = class Preloader
   preload: ->
   	@add.sprite(0, 0,'background')
   	@add.sprite(0, 0, 'letterfall')
-  	@preloadBar = @add.sprite(@GAME_WIDTH-600, @GAME_HEIGHT-250 , 'preloaderBar')
+  	@preloadBar = @add.sprite(Candy.GAME_WIDTH-600, Candy.GAME_HEIGHT-250 , 'preloaderBar')
   	@game.load.setPreloadSprite @preloadBar
   	# load images
   	@game.load.image 'instructions','img/instructions.png'
