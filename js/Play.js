@@ -36,6 +36,7 @@
         this.dx += 50;
         i++;
       }
+      this.add.button(50, 30, 'icons', this.back, this, 'backIcon.png', 'backIcon.png', 'backIcon.png', 'backIcon.png');
       this.add.button(300, 400, 'buttons', this.startWord, this, 'start.png', 'start.png', 'start.png', 'start.png');
       return this.add.button(300, 470, 'buttons', this.nextWord, this, 'nextWord.png', 'nextWord.png', 'nextWord.png', 'nextWord.png');
     };
@@ -48,7 +49,11 @@
         i++;
       }
       Candy.wordIndex++;
-      this.game.state.start('Play');
+      this.state.start('Play');
+    };
+
+    Play.prototype.back = function() {
+      this.state.start('MainMenu');
     };
 
     Play.prototype.startWord = function() {
@@ -58,7 +63,7 @@
         this.wordd[i].destroy();
         i++;
       }
-      this.game.state.start('LetterFall');
+      this.state.start('LetterFall');
     };
 
     return Play;

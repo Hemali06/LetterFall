@@ -30,6 +30,7 @@ Candy.Play = class Play
       @dx += 50
       i++
 
+    @add.button(50,30, 'icons', @back, this,'backIcon.png','backIcon.png','backIcon.png','backIcon.png');
     @add.button(300,400,'buttons', @startWord, this,'start.png','start.png','start.png','start.png')
     @add.button(300,470,'buttons',@nextWord,this,'nextWord.png','nextWord.png','nextWord.png','nextWord.png')
 
@@ -39,7 +40,11 @@ Candy.Play = class Play
       @wordd[i].destroy()
       i++
     Candy.wordIndex++
-    @game.state.start 'Play'
+    @state.start 'Play'
+    return
+
+  back: ->
+    @state.start 'MainMenu'
     return
 
   startWord: ->
@@ -47,5 +52,5 @@ Candy.Play = class Play
     while i < Candy.words[Candy.wordIndex].length
       @wordd[i].destroy()
       i++
-    @game.state.start 'LetterFall'
+    @state.start 'LetterFall'
     return
